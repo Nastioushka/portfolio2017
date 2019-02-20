@@ -1,0 +1,349 @@
+/*Génerale*/
+
+* {
+	box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+	transition: all .2s ease 0s;
+}
+
+*:hover {
+	transition: all .2s ease 0s;
+}
+
+
+@font-face {
+	font-family: 'Crimson Text';
+	src: url("../fonts/crimson-roman-webfont.eot?") format('eot'),
+	 	url("../fonts/crimson-roman-webfont.ttf") format('truetype'),
+	 	url("../fonts/crimson-roman-webfont.woff") format('woff'),
+	 	url("../fonts/crimson-roman-webfont.woff2") format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Apple Chancery';
+	src: 	url("../fonts/Apple-Chancery.ttf") format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+   	font-size: 1.1em;
+    line-height: 1.5;
+    font-family: 'Crimson Text', serif;
+    background-color: #FEFDF8;
+}
+
+p {
+	text-indent: 2em;
+}
+
+a, a:hover, a:visited, a:active {
+	text-decoration: none;
+	color: black;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	min-width: 60%;
+}
+
+h3 {
+	color: #684293;
+}
+
+.container {
+	max-width: 1100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+h1, h2, h3, header p, nav ul li, figcaption{
+	letter-spacing: 0.2em;
+	text-align: center;
+}
+
+h1, header p, nav ul li, figcaption {
+	font-family: 'Apple Chancery', serif; 
+}
+
+
+/*Header*/
+
+header {
+	padding-top: 30px;
+	padding-bottom: 0px;
+	background-image: linear-gradient(#8631e7, black);
+	text-align: center;
+	margin: 0;
+}
+
+header div {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(255,255,255,0.6), rgba(0,0,0,0.3));
+}
+
+header div p {
+	margin: 0;
+	color: white;
+	font-size:  1.2em;
+	font-weight: bold;
+	text-shadow: 0 0 5px black;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+header div p, header, nav, footer {
+	box-shadow: 0 0 20px #684293;
+}
+
+
+#max, #min {
+	margin: 0 auto;
+}
+
+#max {
+	display: none;
+	padding: 20px;
+}
+
+#min {
+	display: block;
+	padding: 0 10px;
+}
+
+
+/*Nav*/
+
+nav {
+	padding-left: 20px;
+	padding-right: 20px;
+	background-image: linear-gradient(white, #c2a2e5);
+}
+
+
+nav ul li {
+	padding: 10px;
+	width: 100%;
+	background-image: linear-gradient(white, #c2a2e5);
+}
+
+nav ul li:hover {
+	font-weight: bold;
+}
+
+nav ul li:hover a::before, nav ul li:hover a::after {
+	content: " - ";
+}
+
+nav ul li a {
+	color: black;
+}
+
+/*Main Generale*/
+
+main section {
+	background-color: #e9def4;
+	margin: 0 20px;
+	padding: 15px;
+	text-align: center;
+}
+
+ article {
+	padding-bottom: 20px;
+}
+
+
+/*Footer Generale*/
+
+footer{
+	color: white;
+	background-image: linear-gradient(#8631e7, black);
+	text-align: center;
+	padding: 30px 0;
+}
+
+footer h3 {
+	color: white;
+}
+
+
+/*Portfolio*/
+
+
+#portfolio section:nth-of-type(1) p {
+	font-weight: bold;
+	padding-bottom: 20px;
+	letter-spacing: 0.1em;
+}
+
+#portfolio figure {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+
+#portfolio figure img {
+	box-shadow: 0 0 30px #684293;
+}
+
+#portfolio figure img:hover {
+	box-shadow: 0 0 50px black;
+}
+
+#portfolio figcaption {
+	padding: 10px;
+}
+
+/*Formation*/
+
+#formation ul li {
+	padding-bottom: 1em;
+}
+
+#publications a {
+	text-decoration: underline #684293;
+	line-height: 2;
+	text-transform: uppercase;
+
+}
+
+#publications ul li:nth-of-type(even) {
+	font-style: italic;
+}
+
+#formation table {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+}
+
+#formation table td{
+	padding: 10px;
+	vertical-align: top;
+}
+
+/*Experience*/
+
+#experience ul {
+	padding-bottom: 30px;
+}
+
+#experience span {
+	text-decoration: underline #684293;
+}
+
+#experience ul li:nth-of-type(2){
+	font-weight: bold;
+}
+
+#experience ul li:nth-of-type(3){
+	font-style: italic;
+}
+
+/*Personnalite*/
+
+#personalite article ul li{
+	font-style: italic;
+	padding: 20px;
+}
+
+
+/*taille tablette*/
+
+@media screen and (min-device-width: 640px) {
+
+	#max {
+	display: block;
+	}
+
+	#min {
+	display: none;
+	}
+
+	h1::before, h1::after {
+	content : " - ";
+}
+
+}
+
+/*Taille ecran*/
+@media screen and (min-device-width: 1100px) {
+
+
+	/*Nav*/
+
+	nav ul li {
+			display: inline-block;
+			width: 25%;
+			padding: 10px 0;
+		}
+
+	nav {
+		position: absolute;
+		top:0px;
+		position: fixed;
+	}
+
+	header {
+		position: relative;
+		padding: 100px 0 30px;
+	}
+
+	header, nav {
+		width: 100%;
+	}
+
+	/*Portfolio*/
+
+	figure {
+		display: inline-block;
+	}
+
+	figure img {
+		height: 180px;
+	}
+
+	/*Competences*/
+
+#portfolio section:nth-of-type(4) article {
+		display: inline-block;
+		width: 50%;
+		vertical-align: top;
+		padding: 30px;	
+	}
+#portfolio section:nth-of-type(4) article {
+	text-align: left;
+	}
+
+
+	/*Experience*/
+
+	#experience section, #personalite section:nth-of-type(2) article{
+		text-align: justify;
+	}
+
+
+	#experience ul li:nth-of-type(1) {
+		padding-bottom: 20px;
+	}
+	
+	#experience section, #personalite section {
+		padding-left: 150px;
+		padding-right: 150px;
+	}
+}
+	
+
+
+
+
+
+
